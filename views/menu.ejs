@@ -3,9 +3,165 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+</head>
+    <title>Můj Web</title>
+    <style>
+        body {
+            background-color: #333;
+            background-image: url(''); /* URL obrázku pro pozadí */
+            background-size: cover; /* Velikost obrázku (můžete použít cover, contain nebo nastavit konkrétní rozměry) */
+            background-repeat: no-repeat; /* Zabraňuje opakování obrázku */
+            background-attachment: fixed; /* Obrázek zůstane na místě, když uživatel rolováním posouvá stránku */
+            margin: 0px;
+        }
+        /* Resetování výchozích stylů pro <ul> a <li> */
+ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Základní styl navigační lišty */
+.navbar {
+    background-color: #333; /* Barva pozadí navbaru */
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+/* Styl pro seznam odkazů v navbaru */
+.navbar ul {
+    list-style: none;
+    display: flex;
+    
+}
+
+.navbar ul li {
+    display: inline; /* Zobrazení položek vedle sebe */
+    margin-right: 20px; /* Mezera mezi položkami */
+}
+
+/* Styl odkazů */
+.navbar ul li a {
+    color: #fff; /* Barva textu */
+    text-decoration: none; /* Odstranění podtržení */
+    font-size: 18px; /* Velikost písma */
+    margin: 0 20px;
+}
+
+/* Styl odkazu při najetí myší */
+.navbar ul li a:hover {
+    color: #ff6600; /* Změna barvy textu na hover */
+}
+ .navbar img{
+    text-align: left;
+    flex: 0 0 10%; /* Šířka obrázku */
+}    
+        .content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .content-text {
+            width: 50%;
+        }
+
+        .content-image {
+            width: 40%;
+        }
+
+        /* Styly pro menu */
+        .menu {
+            position: fixed;
+            right: 0;
+            top: 0;
+            background-color: #444;
+            color: white;
+            width: 200px;
+            height: 100%;
+            transform: translateX(200px);
+            transition: transform 0.3s;
+        }
+
+        .menu.show {
+            transform: translateX(0);
+        }
+
+        .menu a {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: white;
+        }
+        .center-navbar {
+    background-color: #555; /* Barva pozadí druhého menu */
+    text-align: center; /* Uprostřed zarovnání */
+    padding: 5px;
+}
+
+.center-navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Uprostřed zarovnání */
+    color: black;
+
+}
+
+.center-navbar li {
+    margin: 0 10px;
+    font-size: 1.5em; /* Zvětší text na 1,2krát původní velikost */
+    color: black;
+}
+
+.center-navbar a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}      
+    </style>
 </head>
 <body>
-    CUS MÁMO
+
+    <header>
+        <nav class="navbar">
+            <img src="logo3.png" alt="Obrázek" width="1%">
+            <ul>
+                <li><a href="#">Domů</a></li>
+                <li><a href="#">Služby</a></li>
+                <li><a href="#">O nás</a></li>
+                <li><a href="#">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+    <header>
+        <nav class="center-navbar">
+            <ul>
+                <li><a href="https://strav.nasejidelna.cz/0316/login">
+                    <ion-icon name="fast-food-outline"></ion-icon></a></li>
+                <li><a href="https://www.skolaonline.cz/Aktuality.aspx">
+                    <ion-icon name="school-outline"></ion-icon></a></li>
+                <li><a href="comingsoon">
+                    <ion-icon name="image-outline"></ion-icon></a></li>
+                <li><a href="https://www.office.com/">
+                    <ion-icon name="log-in-outline"></ion-icon></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="content-text">
+        <h2>.</h2>
+        
+</div>
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
 </body>
 </html>
+
+//git add -A
+//git commit -m "kozleroshejteros"
+//git push -u origin main
