@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Přihlášení/Registrace</title>
+</head>
+<body>
+
+<h2>Přihlášení</h2>
+<form action="/login" method="post">
+  <div>
+    <label for="username">Uživatelské jméno:</label>
+    <input type="text" id="username" name="username">
+  </div>
+  <div>
+    <label for="password">Heslo:</label>
+    <input type="password" id="password" name="password">
+  </div>
+  <div>
+    <input type="submit" value="Přihlásit se">
+  </div>
+</form>
+
+<hr>
+
+<h2>Registrace</h2>
+<form action="/register" method="post">
+  <div>
+    <label for="new_username">Nové uživatelské jméno:</label>
+    <input type="text" id="new_username" name="username">
+  </div>
+  <div>
+    <label for="new_password">Nové heslo:</label>
+    <input type="password" id="new_password" name="password">
+  </div>
+  <div>
+    <input type="submit" value="Registrovat se">
+  </div>
+</form>
+
+</body>
+</html>

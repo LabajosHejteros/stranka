@@ -1,80 +1,77 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!DOCTYPE html> <!-- Definice verze HTML -->
+<html lang="en"> <!-- Nastavení jazyka dokumentu na angličtinu -->
+<head> <!-- Začátek hlavičky dokumentu -->
+    <meta charset="UTF-8"> <!-- Nastavení kódování znaků na UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Nastavení zobrazení pro různá zařízení -->
 </head>
-    <title>Můj Web</title>
-    <style>
+    <title>Můj Web</title> <!-- Nastavení titulku stránky -->
+    <style> /*<!-- Začátek definice CSS stylů -->
+        /* Styly pro tělo stránky */
         body {
-            background-color: #333;
+            background-color: #333; /* Barva pozadí */
             background-image: url(''); /* URL obrázku pro pozadí */
             background-size: cover; /* Velikost obrázku (můžete použít cover, contain nebo nastavit konkrétní rozměry) */
             background-repeat: no-repeat; /* Zabraňuje opakování obrázku */
             background-attachment: fixed; /* Obrázek zůstane na místě, když uživatel rolováním posouvá stránku */
-            margin: 0px;
+            margin: 0px; /* Okraje */
         }
         /* Resetování výchozích stylů pro <ul> a <li> */
-ul, li {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-/* Základní styl navigační lišty */
-.navbar {
-    background-color: #333; /* Barva pozadí navbaru */
-    text-align: center;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-}
-
-/* Styl pro seznam odkazů v navbaru */
-.navbar ul {
-    list-style: none;
-    display: flex;
-    
-}
-
-.navbar ul li {
-    display: inline; /* Zobrazení položek vedle sebe */
-    margin-right: 20px; /* Mezera mezi položkami */
-}
-
-/* Styl odkazů */
-.navbar ul li a {
-    color: #fff; /* Barva textu */
-    text-decoration: none; /* Odstranění podtržení */
-    font-size: 18px; /* Velikost písma */
-    margin: 0 20px;
-}
-
-/* Styl odkazu při najetí myší */
-.navbar ul li a:hover {
-    color: #ff6600; /* Změna barvy textu na hover */
-}
- .navbar img{
-    text-align: left;
-    flex: 0 0 10%; /* Šířka obrázku */
-}    
+        ul, li {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        /* Styly pro navigační lištu */
+        .navbar {
+            background-color: #333; /* Barva pozadí navbaru */
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+        /* Styly pro seznam odkazů v navbaru */
+        .navbar ul {
+            list-style: none;
+            display: flex;
+        }
+        /* Styly pro položky seznamu v navbaru */
+        .navbar ul li {
+            display: inline; /* Zobrazení položek vedle sebe */
+            margin-right: 20px; /* Mezera mezi položkami */
+        }
+        /* Styly pro odkazy v navbaru */
+        .navbar ul li a {
+            color: #fff; /* Barva textu */
+            text-decoration: none; /* Odstranění podtržení */
+            font-size: 18px; /* Velikost písma */
+            margin: 0 20px;
+        }
+        /* Styly pro odkazy při najetí myší */
+        .navbar ul li a:hover {
+            color: #ff6600; /* Změna barvy textu na hover */
+        }
+        /* Styly pro logo v navbaru */
+        .navbar img {
+            text-align: left;
+            flex: 0 0 10%; /* Šířka obrázku */
+        }
+        /* Styly pro obsah stránky */
         .content {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 20px;
         }
-
+        /* Styly pro textový obsah */
         .content-text {
             width: 50%;
         }
-
+        /* Styly pro obrázkový obsah */
         .content-image {
             width: 40%;
         }
-
-        /* Styly pro menu */
+        /* Styly pro boční menu */
         .menu {
             position: fixed;
             right: 0;
@@ -86,82 +83,111 @@ ul, li {
             transform: translateX(200px);
             transition: transform 0.3s;
         }
-
+        /* Styly pro zobrazení bočního menu */
         .menu.show {
             transform: translateX(0);
         }
-
+        /* Styly pro odkazy v bočním menu */
         .menu a {
             display: block;
             padding: 10px;
             text-decoration: none;
             color: white;
         }
+        /* Styly pro druhé menu */
         .center-navbar {
-    background-color: #555; /* Barva pozadí druhého menu */
-    text-align: center; /* Uprostřed zarovnání */
-    padding: 5px;
+            background-color: #555; /* Barva pozadí druhého menu */
+            text-align: center; /* Uprostřed zarovnání */
+            padding: 5px;
+        }
+        /* Styly pro odkazy v druhém menu */
+        .center-navbar ul {
+            list-style: none;
+            display: flex;
+            justify-content: center; /* Uprostřed zarovnání */
+            color: black;
+        }
+        .center-navbar li {
+            margin: 0 10px;
+            font-size: 1.5em; /* Zvětší text na 1,2krát původní velikost */
+            color: black;
+        }
+        .center-navbar a {
+            text-decoration: none;
+            color: rgb(0, 0, 0);
+        }
+          /* Přidání mezery pro sekci s ID */
+#domu:target::before {
+  content: "";
+  display: block;
+  height: 100px; /* Velikost mezery */
+  margin-top: -100px; /* Záporná hodnota odsune o velikost mezeru nahoru */
 }
-
-.center-navbar ul {
-    list-style: none;
-    display: flex;
-    justify-content: center; /* Uprostřed zarovnání */
-    color: black;
-
-}
-
-.center-navbar li {
-    margin: 0 10px;
-    font-size: 1.5em; /* Zvětší text na 1,2krát původní velikost */
-    color: black;
-}
-
-.center-navbar a {
-    text-decoration: none;
-    color: rgb(0, 0, 0);
-}      
+section {
+    margin-bottom: 50px;
+  }
+  
+  section h2 {
+    font-size: 2em;
+    margin: 0 0 20px;
+    border-bottom: 2px solid #ffffff;
+    border-top: 2px solid #ffffff;
+    padding-bottom: 10px;
+  }
+  
+  section p {
+    font-size: 1.1em;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  
+  section ul {
+    margin-bottom: 20px;
+  }
+  
+  section li {
+    margin-bottom: 10px;
+  }
+  
+  section img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+        
     </style>
 </head>
-<body>
+<body> <!-- Začátek těla stránky -->
 
-    <header>
-        <nav class="navbar">
-            <img src="logo3.png" alt="Obrázek" width="1%">
-            <ul>
-                <li><a href="#">Domů</a></li>
-                <li><a href="#">Služby</a></li>
-                <li><a href="#">O nás</a></li>
-                <li><a href="#">Kontakt</a></li>
+    <header> <!-- Hlavička stránky -->
+        <nav class="navbar"> <!-- Navigační lišta -->
+            <img src="logo3.png" alt="Obrázek" width="1%"> <!-- Logo stránky -->
+            <ul> <!-- Seznam odkazů -->
+                <li><a href="#domu">Domů</a></li>
+                <li><a href="#sluzby">Služby</a></li>
+                <li><a href="#onas">O nás</a></li>
+                <li><a href="#kontakt">Kontakt</a></li>
             </ul>
         </nav>
     </header>
-    <header>
-        <nav class="center-navbar">
-            <ul>
-                <li><a href="https://strav.nasejidelna.cz/0316/login">
-                    <ion-icon name="fast-food-outline"></ion-icon></a></li>
-                <li><a href="https://www.skolaonline.cz/Aktuality.aspx">
-                    <ion-icon name="school-outline"></ion-icon></a></li>
-                <li><a href="comingsoon">
-                    <ion-icon name="image-outline"></ion-icon></a></li>
-                <li><a href="https://www.office.com/">
-                    <ion-icon name="log-in-outline"></ion-icon></a></li>
+    <header> <!-- Další část hlavičky stránky -->
+        <nav class="center-navbar"> <!-- Druhé menu -->
+            <ul> <!-- Seznam odkazů v druhém menu -->
+                <li><a href="https://strav.nasejidelna.cz/0316/login"><ion-icon name="fast-food-outline"></ion-icon></a></li>
+                <li><a href="https://www.skolaonline.cz/Aktuality.aspx"><ion-icon name="school-outline"></ion-icon></a></li>
+                <li><a href="comingsoon"><ion-icon name="image-outline"></ion-icon></a></li>
+                <li><a href="https://www.office.com/"><ion-icon name="log-in-outline"></ion-icon></a></li>
             </ul>
         </nav>
     </header>
 
-    <div class="content-text">
+    <div class="content-text"> <!-- Ostatní obsah stránky -->
         <h2>.</h2>
-        
-</div>
+        <!-- Zde by měl být další obsah, který je však prázdný (pouze nadpis). -->
+    </div>
 
-<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script> <!-- Skript pro ikony (module) -->
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script> <!-- Skript pro ikony (nomodule) -->
 
-</body>
-</html>
-
-//git add -A
-//git commit -m "kozleroshejteros"
-//git push -u origin main
+</body> <!-- Konec těla stránky -->
+</html> <!-- Konec HTML kódu -->
