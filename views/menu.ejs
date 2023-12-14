@@ -1,193 +1,273 @@
-<!DOCTYPE html> <!-- Definice verze HTML -->
-<html lang="en"> <!-- Nastavení jazyka dokumentu na angličtinu -->
-<head> <!-- Začátek hlavičky dokumentu -->
-    <meta charset="UTF-8"> <!-- Nastavení kódování znaků na UTF-8 -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Nastavení zobrazení pro různá zařízení -->
-</head>
-    <title>Můj Web</title> <!-- Nastavení titulku stránky -->
-    <style> /*<!-- Začátek definice CSS stylů -->
-        /* Styly pro tělo stránky */
-        body {
-            background-color: #333; /* Barva pozadí */
-            background-image: url(''); /* URL obrázku pro pozadí */
-            background-size: cover; /* Velikost obrázku (můžete použít cover, contain nebo nastavit konkrétní rozměry) */
-            background-repeat: no-repeat; /* Zabraňuje opakování obrázku */
-            background-attachment: fixed; /* Obrázek zůstane na místě, když uživatel rolováním posouvá stránku */
-            margin: 0px; /* Okraje */
-        }
-        /* Resetování výchozích stylů pro <ul> a <li> */
-        ul, li {
-            margin: 0;
-            padding: 0;
-            list-style: none;
-        }
-        /* Styly pro navigační lištu */
-        .navbar {
-            background-color: #333; /* Barva pozadí navbaru */
-            text-align: center;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 20px;
-        }
-        /* Styly pro seznam odkazů v navbaru */
-        .navbar ul {
-            list-style: none;
-            display: flex;
-        }
-        /* Styly pro položky seznamu v navbaru */
-        .navbar ul li {
-            display: inline; /* Zobrazení položek vedle sebe */
-            margin-right: 20px; /* Mezera mezi položkami */
-        }
-        /* Styly pro odkazy v navbaru */
-        .navbar ul li a {
-            color: #fff; /* Barva textu */
-            text-decoration: none; /* Odstranění podtržení */
-            font-size: 18px; /* Velikost písma */
-            margin: 0 20px;
-        }
-        /* Styly pro odkazy při najetí myší */
-        .navbar ul li a:hover {
-            color: #ff6600; /* Změna barvy textu na hover */
-        }
-        /* Styly pro logo v navbaru */
-        .navbar img {
-            text-align: left;
-            flex: 0 0 10%; /* Šířka obrázku */
-        }
-        /* Styly pro obsah stránky */
-        .content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px;
-        }
-        /* Styly pro textový obsah */
-        .content-text {
-            width: 50%;
-        }
-        /* Styly pro obrázkový obsah */
-        .content-image {
-            width: 40%;
-        }
-        /* Styly pro boční menu */
-        .menu {
-            position: fixed;
-            right: 0;
-            top: 0;
-            background-color: #444;
-            color: white;
-            width: 200px;
-            height: 100%;
-            transform: translateX(200px);
-            transition: transform 0.3s;
-        }
-        /* Styly pro zobrazení bočního menu */
-        .menu.show {
-            transform: translateX(0);
-        }
-        /* Styly pro odkazy v bočním menu */
-        .menu a {
-            display: block;
-            padding: 10px;
-            text-decoration: none;
-            color: white;
-        }
-        /* Styly pro druhé menu */
-        .center-navbar {
-            background-color: #555; /* Barva pozadí druhého menu */
-            text-align: center; /* Uprostřed zarovnání */
-            padding: 5px;
-        }
-        /* Styly pro odkazy v druhém menu */
-        .center-navbar ul {
-            list-style: none;
-            display: flex;
-            justify-content: center; /* Uprostřed zarovnání */
-            color: black;
-        }
-        .center-navbar li {
-            margin: 0 10px;
-            font-size: 1.5em; /* Zvětší text na 1,2krát původní velikost */
-            color: black;
-        }
-        .center-navbar a {
-            text-decoration: none;
-            color: rgb(0, 0, 0);
-        }
-          /* Přidání mezery pro sekci s ID */
-#domu:target::before {
-  content: "";
-  display: block;
-  height: 100px; /* Velikost mezery */
-  margin-top: -100px; /* Záporná hodnota odsune o velikost mezeru nahoru */
-}
-section {
-    margin-bottom: 50px;
-  }
-  
-  section h2 {
-    font-size: 2em;
-    margin: 0 0 20px;
-    border-bottom: 2px solid #ffffff;
-    border-top: 2px solid #ffffff;
-    padding-bottom: 10px;
-  }
-  
-  section p {
-    font-size: 1.1em;
-    line-height: 1.5;
-    margin-bottom: 20px;
-  }
-  
-  section ul {
-    margin-bottom: 20px;
-  }
-  
-  section li {
-    margin-bottom: 10px;
-  }
-  
-  section img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 20px;
-  }
-        
-    </style>
-</head>
-<body> <!-- Začátek těla stránky -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="javascript" href="js.js" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Web Design Mastery | Fitclub</title>
+  </head>
+  <body>
+    
+    <nav>
+      <div class="nav__logo">
+        <a href="#"><img src="logo1.png" alt="logo" /></a>
+      </div>
+      <ul class="nav__links">
+        <li class="link"><a href="#uvod">Úvod</a></li>
+        <li class="link"><a href="#">O nás</a></li>
+        <li class="link"><a href="#">Soutěže</a></li>
+        <li class="link"><a href="#">Proč my</a></li>
+        <li class="link"><a href="#">Ceníky</a></li>
+      </ul>
+    </nav>
 
-    <header> <!-- Hlavička stránky -->
-        <nav class="navbar"> <!-- Navigační lišta -->
-            <img src="logo3.png" alt="Obrázek" width="1%"> <!-- Logo stránky -->
-            <ul> <!-- Seznam odkazů -->
-                <li><a href="#domu">Domů</a></li>
-                <li><a href="#sluzby">Služby</a></li>
-                <li><a href="#onas">O nás</a></li>
-                <li><a href="#kontakt">Kontakt</a></li>
-            </ul>
-        </nav>
-    </header>
-    <header> <!-- Další část hlavičky stránky -->
-        <nav class="center-navbar"> <!-- Druhé menu -->
-            <ul> <!-- Seznam odkazů v druhém menu -->
-                <li><a href="https://strav.nasejidelna.cz/0316/login"><ion-icon name="fast-food-outline"></ion-icon></a></li>
-                <li><a href="https://www.skolaonline.cz/Aktuality.aspx"><ion-icon name="school-outline"></ion-icon></a></li>
-                <li><a href="comingsoon"><ion-icon name="image-outline"></ion-icon></a></li>
-                <li><a href="https://www.office.com/"><ion-icon name="log-in-outline"></ion-icon></a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <div class="content-text"> <!-- Ostatní obsah stránky -->
-        <h2>.</h2>
-        <!-- Zde by měl být další obsah, který je však prázdný (pouze nadpis). -->
+    <div class="mezera">
+      <p></p>
     </div>
 
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script> <!-- Skript pro ikony (module) -->
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script> <!-- Skript pro ikony (nomodule) -->
 
-</body> <!-- Konec těla stránky -->
-</html> <!-- Konec HTML kódu -->
+
+  <section id="uvod">
+    <header class="section__container1 header__container">
+      <div class="header__content">
+        <span class="bg__blur"></span>
+        <span class="bg__blur header__blur"></span>
+        <h4>Posilovna která stojí za to.</h4>
+        <h1><span>CVIČ</span> PRÁVĚ U NÁS</h1>
+        <p>
+          U nás naleznete nejen <b>posilovnu</b>, ale také <b>SPINNING®</b> oddíl, solárium, masáže všeho druhu, 
+          squash a mnoho jiných možností aktivního odpočinku pro Vaše tělo. 
+          Rovněž můžete využít neomezené možnosti kardiozóny a širokou nabídku nápojů našeho baru. 
+          Cílem klubu je uspokojení potřeb všech členů klubu v činnosti týkající se zejména posilování, 
+          aerobních aktivit a zdravé výživy.
+        </p>
+        <button class="btn" onclick="scrollToSection('')">Ceník</button>
+      </div>
+      <div class="header__map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d765.3059533185555!2d12.373479966208794!3d50.081195533533474!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a0f6a1f0ad5479%3A0x989d25b350e0c39b!2sFitness%20club%20Ja%C5%99est!5e1!3m2!1scs!2scz!4v1701243423816!5m2!1scs!2scz" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </header>
+  </section>
+  
+
+    <section class="section__container3 class__container">
+      <div class="class__image">
+        <span class="bg__blur"></span>
+        <img src="class-1.jpg" alt="class" class="class__img-1" />
+      </div>
+      <div class="class__content">
+        <h2 class="section__header1">SOUTĚŽE</h2>
+        <p>
+          V klubu organizujeme soutěž ve zvedání vzpěračské činky - Mr. Barbell a soutěž ve zvedání vlastního těla - 
+          Vazbič. Mr. Barbell se koná pravidelně již od roku 2003, nově na konci března. 
+          Soutěž Vazbič pořádáme na podzim začátkem října. 
+        </p>
+        <button class="btn">Přihlášky</button>
+      </div>
+    </section>
+
+    <section class="section__container4 join__container">
+      <h2 class="section__header2">PROČ CHODIT PRÁVĚ K NÁM ?</h2>
+      <p class="section__subheader">
+        Náš klub se snaží vyhovit každému jednomu členovi posilovny,posilovna je tady pro každého aby vyhověla jeho požadavkům.
+      </p>
+        <div class="join__grid">
+          <div class="join__card">
+            <span><i class="ri-user-star-fill"></i></span>
+            <div class="join__card__content">
+              <h4>Osobní Trenéři</h4>
+              <p>Fitness club JAŘEST má certifikované trenéry.</p>
+            </div>
+          </div>
+          <div class="join__card">
+            <span><i class="ri-vidicon-fill"></i></span>
+            <div class="join__card__content">
+              <h4>Plno Strojů</h4>
+              <p>Naše posilovna má spoustu kvalitních strojů.</p>
+            </div>
+          </div>
+          <div class="join__card">
+            <span><i class="ri-building-line"></i></span>
+            <div class="join__card__content">
+              <h4>Skvělá obsluha</h4>
+              <p>Na recepci vám vždy poradí a pomůžou.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section__container2 explore__container">
+      <div class="explore__grid">
+        <div class="explore__card">
+          <span><i class="ri-boxing-fill"></i></span> 
+          <h4>Strength</h4>
+          <p>
+            Embrace the essence of strength as we delve into its various
+            dimensions physical, mental, and emotional.
+          </p>
+        </div>
+        <div class="explore__card">
+          <span><i class="ri-heart-pulse-fill"></i></span>
+          <h4>Physical Fitness</h4>
+          <p>
+            It encompasses a range of activities that improve health, strength,
+            flexibility, and overall well-being.
+          </p>
+        </div>
+        <div class="explore__card">
+          <span><i class="ri-run-line"></i></span>
+          <h4>Fat Lose</h4>
+          <p>
+            Through a combination of workout routines and expert guidance, we'll
+            empower you to reach your goals.
+          </p>
+        </div>
+        <div class="explore__card">
+          <span><i class="ri-shopping-basket-fill"></i></span>
+          <h4>Weight Gain</h4>
+          <p>
+            Designed for individuals, our program offers an effective approach
+            to gaining weight in a sustainable manner.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section__container5 price__container">
+      <h2 class="section__header">Ceník Služeb</h2>
+      <p class="section__subheader">
+        <b>Pozor!</b> Do posilovny je možné chodit ve dvou časových intervalech. A to přes <b>Obyčejný</b> vstup a <b>Rozšířený</b> vstup
+      </p>
+      <p>Rozšířený vstup mohou získat členové kteří uz v posiovně cvičili alespon tři měsíce.</p>
+      <div class="price__grid">
+        <div class="price__card">
+          <div class="price__card__content">
+            <h4>3 Měsícní</h4>
+            <h3>2300CZK</h3>
+            <p>
+              <i class="ri-checkbox-circle-line"></i>
+              Pouze když je přítomná obsluha
+            </p>
+            <p>
+              <i class="ri-checkbox-circle-line"></i>
+              Možnost zapojit se do soutěží
+            </p>
+          </div>
+          <button class="btn price__btn">Chci tohle!</button>
+        </div>
+        <div class="price__card">
+          <div class="price__card__content">
+            <h4>6 Měsíční</h4>
+            <h3>4500CZK</h3>
+            <p>
+              <i class="ri-checkbox-circle-line"></i>
+              Pouze když je přítomná obsluha     
+            </p>
+            <p>
+              <i class="ri-checkbox-circle-line"></i>
+              Možnost zapojit se do soutěží
+            </p>
+            <p>
+              <i class="ri-checkbox-circle-line"></i>
+              5% Sleva na produkty na baru
+            </p>
+          </div>
+          <button class="btn price__btn">Chci tohle!</button>
+        </div>
+        <div class="price__card">
+          <div class="price__card__content">
+            <h4>12 Měsíční</h4>
+            <h3>6600CZK</h3>
+            <p>
+              <i class="ri-checkbox-circle-line"></i>
+              Jednou týdně vstup bez obsluhy
+            </p>
+            <p>
+              <i class="ri-checkbox-circle-line"></i>
+              Možnost zapojit se do soutěží
+            </p>
+            <p>
+              <i class="ri-checkbox-circle-line"></i>
+              10% Sleva na produkty na baru
+            </p>
+            <p>
+              <i class="ri-checkbox-circle-line"></i>
+              Osobní trenér kdykoliv
+            </p>
+          </div>
+          <button class="btn price__btn">Chci tohle!</button>
+        </div>
+      </div>
+
+      <div class="price__grid2">
+        <div class="price__card2">
+          <div class="price__card__content2">
+            <h4>3 Měsíční +</h4>
+            <h3>2800CZK</h3>
+            <p>
+              <i class="ri-checkbox-circle-line"></i>
+              Kdykoliv kdy chcete
+            </p>
+            <p>
+              <i class="ri-checkbox-circle-line"></i>
+              Možnost zapojit se do soutěží
+            </p>
+          </div>
+          <button class="btn price__btn2">Chci tohle!</button>
+        </div>
+        <div class="price__card2">
+          <div class="price__card__content2">
+            <h4>6 Měsíční +</h4>
+            <h3>5200CZK</h3>
+            <p>
+              <i class="ri-checkbox-circle-line"></i>
+              Kdykoliv kdy chcete
+            </p>
+            <p>
+              <i class="ri-checkbox-circle-line"></i>
+              15% Sleva na produkty na baru
+            </p>
+            <p>
+              <i class="ri-checkbox-circle-line"></i>
+              Osobní trenér kdykoliv
+            </p>
+          </div>
+          <button class="btn price__btn2">Chci tohle!</button>
+        </div>
+        <div class="price__card2">
+          <div class="price__card__content2">
+            <h4>12 Měsíční +</h4>
+            <h3>7800CZK</h3>
+            <p>
+              <i class="ri-checkbox-circle-line"></i>
+              Kdykoliv kdy chcete
+            </p>
+            <p>
+              <i class="ri-checkbox-circle-line"></i>
+              Osobní trenér kdykoliv
+            </p>
+            <p>
+              <i class="ri-checkbox-circle-line"></i>
+              20% Sleva na produkty na baru
+            </p>
+            <p>
+              <i class="ri-checkbox-circle-line"></i>
+              Při příchodu protein zdarma
+            </p>
+          </div>
+          <button class="btn price__btn2">Chci tohle!</button>
+        </div>
+      </div>
+      
+    </section>
+
+    
+
+  
+        
+    <div class="footer__bar">
+      Copyright © 2023 Filip Labaj. Všechna práva vyhrazena.
+    </div>
+  </body>
+</html>

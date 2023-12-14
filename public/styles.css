@@ -1,0 +1,556 @@
+
+        /* Resetování výchozích stylů a nastavení základních stylů pro stránku */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif; /* Upravte podle vašich preferencí */
+  }
+  
+  /* Nastavení základních stylů pro navigační menu */
+  nav {
+    background-color: #404040; /* Barva pozadí navigačního menu */
+    padding: 10px;
+    display: flex;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000; /* Zajišťuje, že bude nad obsahem stránky */
+  }
+  
+  /* Nastavení stylů pro logo v navigačním menu */
+  .nav__logo img {
+    height: 50px; /* Upravte výšku podle potřeby */
+  }
+  
+  /* Nastavení stylů pro odkazy v navigačním menu */
+  .nav__links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    margin-right: 20px;
+    padding: 0;
+  }
+  
+  .link {
+    margin-right: 15px; /* Odstup mezi odkazy */
+  }
+  
+  .link a {
+    text-decoration: none;
+    color: yellow; /* Barva textu odkazů */
+    font-weight: bold;
+    transition: color 0.3s ease; /* Plynulá změna barvy při najetí myší */
+  }
+  
+  .link a:hover {
+    color: #000; /* Barva textu odkazů při najetí myší */
+  }
+  
+  /* Nastavení stylů pro logo v navigačním menu */
+  .nav__logo img {
+    height: 50px; /* Výchozí výška loga */
+    transition: transform 0.3s ease; /* Plynulá změna velikosti při najetí myší */
+  }
+  
+  .nav__logo img:hover {
+    transform: scale(1.1); /* Zvětšení loga při najetí myší (1.1 znamená o 10% větší) */
+  }
+  /* Nastavení stylů pro logo v navigačním menu */
+  .nav__logo {
+    width: 200px; /* Upravte šířku podle potřeby */
+  }
+  
+  .nav__logo img {
+    width: 100%; /* Zajistí, že obrázek v rámci loga zaujme 100% šířky kontejneru */
+    height: auto; /* Umožní zachování původních proporcí obrázku */
+  }
+  /* Resetování výchozích stylů a nastavení základních stylů pro stránku */
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif; /* Upravte podle vašich preferencí */
+    background-color: #ffffff; /* Barva pozadí stránky - bílá */
+    color: #333; /* Barva textu */
+  }
+  
+  /* Nastavení stylů pro hlavičku */
+  .section__container1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    background-color: #606060; /* Hlavní barva - modrá */
+    color: #fff; /* Barva textu v hlavičce - bílá */
+  }
+  .section__container2 {
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    background-color: #606060; /* Hlavní barva - modrá */
+    color: #fff; /* Barva textu v hlavičce - bílá */
+  }
+  .section__container3 {
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    background-color: #606060; /* Hlavní barva - modrá */
+    color: #fff; /* Barva textu v hlavičce - bílá */
+  }
+  .section__container4 {
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    background-color: #606060; /* Hlavní barva - modrá */
+    color: #fff; /* Barva textu v hlavičce - bílá */
+  }
+  .section__container5 {
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    background-color: #606060; /* Hlavní barva - modrá */
+    color: #fff; /* Barva textu v hlavičce - bílá */
+  }
+  
+  
+  
+  
+  
+  .header__content {
+    max-width: 600px; /* Maximální šířka obsahu v hlavičce */
+  }
+  
+  /* Nastavení stylů pro text v hlavičce */
+  h4, h1, p {
+    margin: 0;
+    color: black;
+  }
+  
+  h4 {
+    font-size: 1.5em; /* Velikost textu - 1.5em */
+  }
+  
+  h1 {
+    font-size: 3em; /* Velikost textu - 3em */
+  }
+  
+  p {
+    font-size: 1.2em; /* Velikost textu - 1.2em */
+    margin-top: 20px; /* Odstup od nadřazeného elementu */
+  }
+  
+  /* Nastavení stylů pro tlačítko v hlavičce */
+  .btn {
+    background-color: #ffcc00; /* Barva pozadí tlačítka - žlutá */
+    color: #333; /* Barva textu tlačítka - tmavá šedá */
+    padding: 10px 20px; /* Vnitřní odsazení tlačítka */
+    border: none;
+    border-radius: 5px; /* Zaoblené rohy */
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Plynulá změna barvy pozadí při najetí myší */
+  }
+  
+  .btn:hover {
+    background-color: #333; /* Barva pozadí tlačítka při najetí myší - tmavě šedá */
+    color: #fff; /* Barva textu tlačítka při najetí myší - bílá */
+  }
+  
+  /* Nastavení stylů pro obrázek v hlavičce */
+  .header__image img {
+    max-width: 100%; /* Obrázek nebude přesahovat svou přirozenou šířku */
+    height: auto; /* Umožní zachování původních proporcí obrázku */
+  }
+  /* Nastavení stylů pro obrázek v hlavičce */
+  .header__image img {
+    max-width: 100%; /* Obrázek nebude přesahovat svou přirozenou šířku */
+    height: 200px; /* Umožní zachování původních proporcí obrázku */
+    display: block; /* Odstraní mezery pod obrázkem */
+    margin: 0 auto; /* Zarovná obrázek na střed */
+  }
+  /* Nastavení stylů pro sekci s kartami */
+  .explore__container {
+    padding: 50px;
+    background-color: #606060; /* Barva pozadí sekce */
+    text-align: center;
+    color: #fff; /* Barva textu */
+  }
+  
+  /* Nastavení stylů pro mřížku karet */
+  .explore__grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Uprostřed karet */
+    gap: 20px;
+  }
+  
+  /* Nastavení stylů pro jednotlivou kartu */
+  .explore__card {
+    background-color: #404040; /* Barva pozadí karty */
+    color: #fff; /* Barva textu */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Stín karty */
+    width: 250px; /* Šířka karty */
+    transition: transform 0.3s ease; /* Plynulá změna velikosti karty při najetí myší */
+  }
+  
+  .explore__card:hover {
+    transform: scale(1.05); /* Zvětšení karty při najetí myší */
+  }
+  
+  /* Nastavení stylů pro ikony v kartách */
+  .explore__card span {
+    display: block;
+    font-size: 2em;
+    margin-bottom: 10px;
+  }
+  
+  /* Nastavení stylů pro nadpisy v kartách */
+  .explore__card h4 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  
+  /* Nastavení stylů pro text v kartách */
+  .explore__card p {
+    font-size: 1em;
+    line-height: 1.4;
+  }
+  /* Nastavení stylů pro sekci s třídami */
+  .class__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+  }
+  
+  /* Nastavení stylů pro obrázky v sekci */
+  .class__image {
+    position: relative;
+    flex: 1;
+    overflow: hidden;
+  }
+  
+  .class__image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 30px;
+    transition: transform 0.3s ease; /* Plynulá změna velikosti obrázku při najetí myší */
+  }
+  
+  /* Nastavení stylů pro textový obsah v sekci */
+  .class__content {
+    flex: 1;
+    margin-left: 20px; /* Odstup mezi obrázkem a textem */
+  }
+  
+  
+  /* Nastavení stylů pro text v sekci */
+  .class__content p {
+    color: #000000; /* Barva textu */
+    line-height: 1.5;
+  }
+  
+  /* Nastavení stylů pro tlačítko v sekci */
+  .btn {
+    background-color: #ffcc00; /* Barva pozadí tlačítka - žlutá */
+    color: #333; /* Barva textu tlačítka - tmavá šedá */
+    padding: 10px 20px; /* Vnitřní odsazení tlačítka */
+    border: none;
+    border-radius: 5px; /* Zaoblené rohy */
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Plynulá změna barvy pozadí při najetí myší */
+  }
+  
+  .btn:hover {
+    background-color: #404040; /* Barva pozadí tlačítka při najetí myší - tmavě šedá */
+    color: #000000; /* Barva textu tlačítka při najetí myší - bílá */
+  }
+  .join__container {
+  background-color: #606060;
+  color: #000000;
+}
+
+.join__image {
+  position: relative;
+}
+
+.join__image img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.join__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.join__card {
+  background-color: #404040;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.join__card span {
+  color: #ffcc00;
+  font-size: 36px;
+}
+
+.join__card h4 {
+  color: #000000;
+  margin-top: 10px;
+}
+
+.join__card p {
+  color: #000000;
+}
+.price__container {
+  background-color: #606060;
+  color: #000000;
+  padding: 60px 0;
+  text-align: center; /* Centrování obsahu */
+}
+
+.price__container .section__header,
+.price__container .section__subheader {
+  margin-bottom: 30px;
+}
+.section__header2{
+    text-align: center;
+}
+/* Nastavení stylů pro nadpis v sekci */
+.section__header1,.section__header2 {
+    color: #000000; /* Barva nadpisu */
+  }
+
+.price__grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.price__card {
+  background-color: #404040;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 250px;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease; /* Plynulá změna velikosti karty při najetí myší */
+}
+
+.price__card__content {
+  margin-bottom: 20px;
+}
+
+.price__card h4 {
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.price__card h3 {
+  color: #ffcc00;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.price__card p {
+  color: #cccccc;
+  margin-bottom: 10px;
+}
+
+.price__card__content i {
+  color: #ffcc00;
+  margin-right: 5px;
+}
+
+.price__btn {
+  background-color: #ffcc00;
+  color: #000000;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.price__btn:hover {
+  background-color: #333333;
+}
+
+.price__card:hover {
+  transform: scale(1.05); /* Zvětšení karty při najetí myší */
+}
+
+.price__grid2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.price__card2 {
+  background-color: #000000;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 250px;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease; /* Plynulá změna velikosti karty při najetí myší */
+}
+
+.price__card__content2 {
+  margin-bottom: 20px;
+}
+
+.price__card2 h4 {
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.price__card2 h3 {
+  color: #ffcc00;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.price__card2 p {
+  color: #cccccc;
+  margin-bottom: 10px;
+}
+
+.price__card__content2 i {
+  color: #ffcc00;
+  margin-right: 5px;
+}
+
+.price__btn2 {
+  background-color: #ffcc00;
+  color: #000000;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.price__btn2:hover {
+  background-color: #ff0000;
+}
+
+.price__card2:hover {
+  transform: scale(1.05); /* Zvětšení karty při najetí myší */
+}
+/* Nastavení stylů pro patičku */
+.footer__container {
+  position: relative;
+  background-color: #000; /* Černá barva pozadí patičky */
+  color: #fff; /* Bílá barva textu v patičce */
+  padding: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+/* Nastavení stylů pro logo v patičce */
+.footer__logo img {
+  height: 50px; /* Upravte výšku podle potřeby */
+}
+
+/* Nastavení stylů pro jednotlivé sloupce v patičce */
+.footer__col {
+  flex: 1; /* Rozdělení prostoru mezi sloupce */
+  margin-right: 20px; /* Odstup mezi sloupci */
+}
+
+/* Nastavení stylů pro text v patičce */
+.footer__container p {
+  font-size: 1.2em; /* Velikost textu - 1.2em */
+}
+
+/* Nastavení stylů pro sociální ikony v patičce */
+.footer__socials a {
+  color: #fff; /* Bílá barva ikon */
+  margin-right: 10px; /* Odstup mezi ikonami */
+  font-size: 1.5em; /* Velikost ikon - 1.5em */
+}
+
+/* Nastavení stylů pro nadpisy v patičce */
+.footer__col h4 {
+  font-size: 1.5em; /* Velikost nadpisu - 1.5em */
+}
+
+/* Nastavení stylů pro odkazy v patičce */
+.footer__col a {
+  text-decoration: none;
+  color: #ccc; /* Barva textu odkazů */
+  display: block;
+  margin-bottom: 10px; /* Odstup mezi odkazy */
+  transition: color 0.3s ease; /* Plynulá změna barvy textu při najetí myší */
+}
+
+.footer__col a:hover {
+  color: #ffcc00; /* Barva textu odkazů při najetí myší */
+}
+
+/* Nastavení stylů pro patičkový pruh */
+.footer__bar {
+  background-color: #000; /* Černá barva pozadí pruhu */
+  color: #fff; /* Bílá barva textu v pruhu */
+  text-align: center;
+  padding: 10px;
+}
+.header__map {
+  max-width: 100%; /* Zajistí, že mapa nebude širší než rodičovský prvek */
+  height: 300px; /* Nastavte výšku podle potřeby */
+  margin-bottom: 20px; /* Odstup na spodní straně mapy */
+  margin-right: 200px;
+  overflow: hidden; /* Skryje přebytečný obsah, pokud je mapa větší než rodičovský prvek */
+  border-radius: 8px; /* Zaoblené rohy mapy */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Stín pro efekt vrstvy */
+}
+
+.header__map iframe {
+  width: 100%; /* Zaplní rodičovský prvek */
+  height: 100%; /* Zaplní rodičovský prvek */
+  border: 0; /* Odstraní rámeček kolem mapy */
+}
+
+.mezera {
+  height: 65px;
+  background-color: #404040;
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  #uvod:target::before {
+    content: "";
+    display: block;
+    height: 100px; /* Velikost mezery */
+    margin-top: -100px; /* Záporná hodnota odsune o velikost mezeru nahoru */
+  }

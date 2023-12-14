@@ -1,6 +1,6 @@
 const express = require('express'); // Import frameworku Express
 const app = express(); // Vytvoření instance aplikace Express
-const port = 3001; // Port, na kterém server běží
+const port = 3000; // Port, na kterém server běží
 const mysql = require('mysql');
 
 const bodyParser = require('body-parser');
@@ -8,12 +8,14 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 const path = require('path'); // Import knihovny path pro práci s cestami k souborům
 const ejs = require('ejs'); // Import šablony EJS pro renderování HTML
+const { error } = require('console');
 
 const db = mysql.createConnection({
   host: '192.168.1.161',
   user: 'filip.labaj',
   password: 'Labajos77',
-  database: 'filip.labaj'
+  database: 'filip.labaj',
+  port: 3001 
 
 });
 
@@ -33,9 +35,11 @@ app.post('/login', (req, res) => {
   // Zde zůstává kontrola přihlašovacích údajů, jak byla uvedena dříve
 });
 
-app.post('/register', (req, res) => {
+app.post('/register ', (req, res) => {
   const username = req.body.username;
   const password = req.body.password;
+
+  console.log(req.body.username)
 
   const query = 'INSERT INTO users (username, password) VALUES (?, ?)';
   db.query(query, [username, password], (err, result) => {
@@ -44,6 +48,9 @@ app.post('/register', (req, res) => {
     // Můžete přesměrovat na jinou stránku nebo provést jinou akci po úspěšné registraci
   });
 });
+
+app.use(express.static(path.join(__dirname, 'assets')));
+app.use(express.static(path.join(__dirname, 'styles.css')));
 
 
 
@@ -59,6 +66,31 @@ app.listen(port, () => {
 app.get('/menu', (req, res) => { 
   res.render('menu'); // menu.ejs
 });
+
+//svg
+app.get('/svg', (req, res) => {
+  const queryPromise = new Promise((resolve, reject) => {
+    db.query('SELECT svg_data, style FROM svg_data', (error, results) => {
+      if (error) {
+        reject(error);
+      } else {
+        resolve(results);
+      }
+    });
+  });
+
+  queryPromise.then((results) => {
+    const svgDataArray = results.map(result => result.svg_data);
+    const svgSTYLEArray = results.map(result => result.style);
+
+    res.render('svg.ejs', { svgDataArray, svgSTYLEArray });
+  }).catch((error) => {
+    throw error;
+  });
+});
+
+
+
 
 
 //git add -A
