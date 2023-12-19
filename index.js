@@ -95,4 +95,4 @@ app.get('/svg', (req, res) => {
 
 //git add -A
 //git commit -m "co jsem udělal"
-// 
+//git push -u origin main
