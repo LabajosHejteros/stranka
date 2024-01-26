@@ -89,6 +89,28 @@ app.get('/svg', (req, res) => {
   });
 });
 
+//ROUTA trimesice
+app.get('/3month', (req, res) => {
+
+  res.render("3month",{res})
+})      
+app.post('/3month', function (request, response, next) {
+ 
+  // SQL dotaz pro vložení dat do databáze
+  var sql = `INSERT INTO users (predplatne, telefon, email) VALUES ('${request.body.predplatne}','${request.body.telefon}','${request.body.email}')`;
+ 
+  db.query(sql, (error, results, fields) => {
+    if (error) {
+      console.error(error);
+      return;
+    }
+    console.log(results);
+    response.redirect('/menu'); // Přesměrování na jinou stránku
+  });
+  
+  
+})
+
 
 
 

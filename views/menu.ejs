@@ -15,10 +15,9 @@
       </div>
       <ul class="nav__links">
         <li class="link"><a href="#uvod">Úvod</a></li>
-        <li class="link"><a href="#">O nás</a></li>
-        <li class="link"><a href="#">Soutěže</a></li>
-        <li class="link"><a href="#">Proč my</a></li>
-        <li class="link"><a href="#">Ceníky</a></li>
+        <li class="link"><a href="#soutez">Soutěže</a></li>
+        <li class="link"><a href="#proc">Proč my</a></li>
+        <li class="link"><a href="#cenik">Ceníky</a></li>
       </ul>
     </nav>
 
@@ -42,15 +41,19 @@
           Cílem klubu je uspokojení potřeb všech členů klubu v činnosti týkající se zejména posilování, 
           aerobních aktivit a zdravé výživy.
         </p>
-        <button class="btn" onclick="scrollToSection('')">Ceník</button>
+        <div class="mezera">
+          <p></p>
+        </div>
+        <a href="#cenik" class="btn">Ceník</a>
       </div>
       <div class="header__map">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d765.3059533185555!2d12.373479966208794!3d50.081195533533474!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a0f6a1f0ad5479%3A0x989d25b350e0c39b!2sFitness%20club%20Ja%C5%99est!5e1!3m2!1scs!2scz!4v1701243423816!5m2!1scs!2scz" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </header>
   </section>
-  
 
+  
+<section id="soutez">
     <section class="section__container3 class__container">
       <div class="class__image">
         <span class="bg__blur"></span>
@@ -66,7 +69,8 @@
         <button class="btn">Přihlášky</button>
       </div>
     </section>
-
+</section>
+<section id="proc">
     <section class="section__container4 join__container">
       <h2 class="section__header2">PROČ CHODIT PRÁVĚ K NÁM ?</h2>
       <p class="section__subheader">
@@ -133,7 +137,8 @@
         </div>
       </div>
     </section>
-
+</section>
+<section id="cenik">
     <section class="section__container5 price__container">
       <h2 class="section__header">Ceník Služeb</h2>
       <p class="section__subheader">
@@ -154,8 +159,8 @@
               Možnost zapojit se do soutěží
             </p>
           </div>
-          <button class="btn price__btn">Chci tohle!</button>
-        </div>
+          <button class="btn price__btn" onclick="window.location.href='http://localhost:3000/3month'">Chci tohle!</button>
+        </div>        
         <div class="price__card">
           <div class="price__card__content">
             <h4>6 Měsíční</h4>
@@ -259,8 +264,8 @@
           <button class="btn price__btn2">Chci tohle!</button>
         </div>
       </div>
-      
     </section>
+</section>
 
     
 

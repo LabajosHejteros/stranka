@@ -8,7 +8,7 @@ body {
   
   /* Nastavení základních stylů pro navigační menu */
   nav {
-    background-color: #404040; /* Barva pozadí navigačního menu */
+    background-color: #2177a7; /* Barva pozadí navigačního menu */
     padding: 10px;
     display: flex;
     position: fixed;
@@ -81,7 +81,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 50px;
-    background-color: #606060; /* Hlavní barva - modrá */
+    background-color: #2e98d4; /* Hlavní barva - modrá */
     color: #fff; /* Barva textu v hlavičce - bílá */
   }
   .section__container2 {
@@ -95,7 +95,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 50px;
-    background-color: #606060; /* Hlavní barva - modrá */
+    background-color: #2e98d4; /* Hlavní barva - modrá */
     color: #fff; /* Barva textu v hlavičce - bílá */
   }
   .section__container4 {
@@ -172,7 +172,7 @@ body {
   /* Nastavení stylů pro sekci s kartami */
   .explore__container {
     padding: 50px;
-    background-color: #606060; /* Barva pozadí sekce */
+    background-color: #2e98d4; /* Barva pozadí sekce */
     text-align: center;
     color: #fff; /* Barva textu */
   }
@@ -271,7 +271,7 @@ body {
     color: #000000; /* Barva textu tlačítka při najetí myší - bílá */
   }
   .join__container {
-  background-color: #606060;
+  background-color: #2e98d4;
   color: #000000;
 }
 
@@ -313,7 +313,7 @@ body {
   color: #000000;
 }
 .price__container {
-  background-color: #606060;
+  background-color: #2e98d4;
   color: #000000;
   padding: 60px 0;
   text-align: center; /* Centrování obsahu */
@@ -528,7 +528,7 @@ body {
 
 .mezera {
   height: 65px;
-  background-color: #404040;
+  background-color: #2e98d4;
   
 }
 
@@ -552,5 +552,23 @@ body {
     content: "";
     display: block;
     height: 100px; /* Velikost mezery */
+    margin-top: -100px; /* Záporná hodnota odsune o velikost mezeru nahoru */
+  }
+  #soutez:target::before {
+    content: "";
+    display: block;
+    height: 100px; /* Velikost mezery */
+    margin-top: -100px; /* Záporná hodnota odsune o velikost mezeru nahoru */
+  }
+  #proc:target::before {
+    content: "";
+    display: block;
+    height: 100px; /* Velikost mezery */
+    margin-top: -100px; /* Záporná hodnota odsune o velikost mezeru nahoru */
+  }
+  #cenik:target::before {
+    content: "";
+    display: block;
+    height: 50px; /* Velikost mezery */
     margin-top: -100px; /* Záporná hodnota odsune o velikost mezeru nahoru */
   }
