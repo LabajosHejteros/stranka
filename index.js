@@ -112,12 +112,100 @@ app.post('/3month', function (request, response, next) {
   
 })
 
-//ROUTA trimesice
-app.get('/3month+', (req, res) => {
+//ROUTA trimesice+
+app.get('/3monthplus', (req, res) => {
 
-  res.render("3month+",{res})
+  res.render("3monthplus",{res})
 })      
-app.post('/3month+', function (request, response, next) {
+app.post('/3monthplus', function (request, response, next) {
+ 
+  // SQL dotaz pro vložení dat do databáze
+  var sql = `INSERT INTO users (predplatne, telefon, email) VALUES ('${request.body.predplatne}','${request.body.telefon}','${request.body.email}')`;
+ 
+  db.query(sql, (error, results, fields) => {
+    if (error) {
+      console.error(error);
+      return;
+    }
+    console.log(results);
+    response.redirect('/menu'); // Přesměrování na jinou stránku
+  });
+  
+  
+})
+
+//ROUTA sestmesicu
+app.get('/6month', (req, res) => {
+
+  res.render("6month",{res})
+})      
+app.post('/6month', function (request, response, next) {
+ 
+  // SQL dotaz pro vložení dat do databáze
+  var sql = `INSERT INTO users (predplatne, telefon, email) VALUES ('${request.body.predplatne}','${request.body.telefon}','${request.body.email}')`;
+ 
+  db.query(sql, (error, results, fields) => {
+    if (error) {
+      console.error(error);
+      return;
+    }
+    console.log(results);
+    response.redirect('/menu'); // Přesměrování na jinou stránku
+  });
+  
+  
+})
+
+//ROUTA sestmesicu+
+app.get('/6monthplus', (req, res) => {
+
+  res.render("6monthplus",{res})
+})      
+app.post('/6monthplus', function (request, response, next) {
+ 
+  // SQL dotaz pro vložení dat do databáze
+  var sql = `INSERT INTO users (predplatne, telefon, email) VALUES ('${request.body.predplatne}','${request.body.telefon}','${request.body.email}')`;
+ 
+  db.query(sql, (error, results, fields) => {
+    if (error) {
+      console.error(error);
+      return;
+    }
+    console.log(results);
+    response.redirect('/menu'); // Přesměrování na jinou stránku
+  });
+  
+  
+})
+
+//ROUTA 12mesicu
+app.get('/12month', (req, res) => {
+
+  res.render("12month",{res})
+})      
+app.post('/12month', function (request, response, next) {
+ 
+  // SQL dotaz pro vložení dat do databáze
+  var sql = `INSERT INTO users (predplatne, telefon, email) VALUES ('${request.body.predplatne}','${request.body.telefon}','${request.body.email}')`;
+ 
+  db.query(sql, (error, results, fields) => {
+    if (error) {
+      console.error(error);
+      return;
+    }
+    console.log(results);
+    response.redirect('/menu'); // Přesměrování na jinou stránku
+  });
+  
+  
+})
+
+//ROUTA 12mesicu+
+app.get('/12monthplus', (req, res) => {
+
+  res.render("12monthplus",{res})
+})      
+app.post('/12monthplus', function (request, response, next) {
  
   // SQL dotaz pro vložení dat do databáze
   var sql = `INSERT INTO users (predplatne, telefon, email) VALUES ('${request.body.predplatne}','${request.body.telefon}','${request.body.email}')`;
