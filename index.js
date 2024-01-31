@@ -67,6 +67,10 @@ app.get('/menu', (req, res) => {
   res.render('menu'); // menu.ejs
 });
 
+app.get('/dekujeme', (req, res) => { 
+  res.render('dekujeme'); // menu.ejs
+});
+
 
 //svg
 app.get('/svg', (req, res) => {
@@ -106,7 +110,7 @@ app.post('/3month', function (request, response, next) {
       return;
     }
     console.log(results);
-    response.redirect('/menu'); // Přesměrování na jinou stránku
+    response.redirect('/dekujeme'); // Přesměrování na jinou stránku
   });
   
   

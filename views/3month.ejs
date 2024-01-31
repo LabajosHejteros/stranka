@@ -60,7 +60,7 @@ body {
 <body>
   <form action="/3month" method="POST">
     <label for="country">Zde je vaše předplatné pokud chcete můžete si ho ještě změnit</label>
-    <select id="predplatne" name="predplatne">
+    <select id="predplatne" name="predplatne" required>
       <option value="3">3 Měsíce</option>
       <option value="3+">3 Měsíce+</option>
       <option value="6">6 Měsíců</option>
@@ -70,10 +70,10 @@ body {
     </select>
     <div class="container">
     <label for="telefon">Tel. Číslo</label>
-    <input type="text" id="telefon" name="telefon" placeholder="Zadejte tel. číslo">
+    <input type="text" id="telefon" name="telefon" placeholder="Zadejte tel. číslo" required>
 
     <label for="mail">Email</label>
-    <input type="text" id="email" name="email" placeholder="Zadejte váš Email ">
+    <input type="text" id="email" name="email" placeholder="Zadejte váš Email " required>
 
     
   

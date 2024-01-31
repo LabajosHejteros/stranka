@@ -6,80 +6,76 @@
     <title>Tři měsíce+</title>
     <style>
         body {
-  font-family: Arial;
-}
+            font-family: Arial;
+        }
 
-form {
-  max-width: 400px;
-  margin: 20px auto 0; /* Odsazení 20px zhora, zarovnání vodorovně na střed */
-  background-color: #2e98d4; /* Barva pozadí pro formulář */
-  padding: 20px;
-  border-radius: 5px;
-  color: white; /* Barva textu pro formulář */
-}
+        form {
+            max-width: 400px;
+            margin: 20px auto 0; /* Odsazení 20px zhora, zarovnání vodorovně na střed */
+            background-color: #2e98d4; /* Barva pozadí pro formulář */
+            padding: 20px;
+            border-radius: 5px;
+            color: white; /* Barva textu pro formulář */
+        }
 
-label {
-  display: block;
-  margin-bottom: 5px;
-}
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
 
-select,
-input[type="text"],
-input[type="submit"] {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
+        select,
+        input[type="text"],
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
 
-select {
-  color: #2e98d4;
-}
+        select {
+            color: #2e98d4;
+        }
 
-input[type="submit"] {
-  background-color: #fff; /* Barva tlačítka */
-  color: #2e98d4;
-  border: none;
-  cursor: pointer;
-}
+        input[type="submit"] {
+            background-color: #fff; /* Barva tlačítka */
+            color: #2e98d4;
+            border: none;
+            cursor: pointer;
+        }
 
-input[type="submit"]:hover {
-  background-color: #1c7aa9;
-}
+        input[type="submit"]:hover {
+            background-color: #1c7aa9;
+        }
 
-body {
-  background-color: #1a6591; /* Barva pozadí pro celou stránku */
-  margin: 0; /* Odstranění vnějšího okraje */
-  padding: 0; /* Odstranění vnitřního okraje */
-}
-
-
+        body {
+            background-color: #1a6591; /* Barva pozadí pro celou stránku */
+            margin: 0; /* Odstranění vnějšího okraje */
+            padding: 0; /* Odstranění vnitřního okraje */
+        }
     </style>
 </head>
 <body>
-  <form action="/3monthplus" method="POST">
-    <label for="country">Zde je vaše předplatné pokud chcete můžete si ho ještě změnit</label>
-    <select id="predplatne" name="predplatne">
-      <option value="12">12 Měsíců</option>
-      <option value="6+">6 Měsíců+</option> 
-      <option value="3+">3 Měsíce+</option>
-      <option value="3">3 Měsíce</option>
-      <option value="6">6 Měsíců</option>
-      <option value="12+">12 Měsíců+</option>
-    </select>
-    <div class="container">
-    <label for="telefon">Tel. Číslo</label>
-    <input type="text" id="telefon" name="telefon" placeholder="Zadejte tel. číslo">
+    <form action="/3monthplus" method="POST">
+        <label for="country">Zde je vaše předplatné pokud chcete můžete si ho ještě změnit</label>
+        <select id="predplatne" name="predplatne" required>
+            <option value="12">12 Měsíců</option>
+            <option value="6+">6 Měsíců+</option>
+            <option value="3+">3 Měsíce+</option>
+            <option value="3">3 Měsíce</option>
+            <option value="6">6 Měsíců</option>
+            <option value="12+">12 Měsíců+</option>
+        </select>
+        <div class="container">
+            <label for="telefon">Tel. Číslo</label>
+            <input type="text" id="telefon" name="telefon" placeholder="Zadejte tel. číslo" required>
 
-    <label for="mail">Email</label>
-    <input type="text" id="email" name="email" placeholder="Zadejte váš Email ">
+            <label for="mail">Email</label>
+            <input type="text" id="email" name="email" placeholder="Zadejte váš Email " required>
 
-    
-  
-    <input type="submit" value="Odeslat a zpět">
-  </form>
-</div>
+            <input type="submit" value="Odeslat a zpět">
+        </div>
+    </form>
 </body>
 </html>
